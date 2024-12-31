@@ -58,7 +58,7 @@ class IntroSeenGuard extends AutoRouteGuard {
 }
 
 @AutoRouterConfig()
-class AppRouter extends _$AppRouter {
+class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
         AutoRoute(page: IntroRoute.page),

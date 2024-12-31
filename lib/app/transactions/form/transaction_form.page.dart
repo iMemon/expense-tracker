@@ -704,7 +704,7 @@ class _TransactionFormPageState extends State<TransactionFormPage> {
                                             showTimePickerAfterDate: true,
                                           );
                                           if (pickedDate == null) return;
-
+                                          
                                           setState(() {
                                             date = pickedDate;
                                           });

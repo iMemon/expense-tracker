@@ -2,7 +2,7 @@ import 'package:drift/drift.dart';
 import 'package:dynamic_color/dynamic_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
+// import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:intl/intl.dart';
 import 'package:monekin/core/database/services/user-setting/user_setting_service.dart';
 import 'package:monekin/core/presentation/theme.dart';
@@ -11,7 +11,7 @@ import 'package:monekin/i18n/translations.g.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await MobileAds.instance.initialize();
+  // await MobileAds.instance.initialize();
 
   runApp(const MonekinAppEntryPoint());
 }
@@ -23,7 +23,7 @@ class MonekinAppEntryPoint extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("------------------ APP ENTRY POINT ------------------");
+    print('------------------ APP ENTRY POINT ------------------');
 
     return StreamBuilder(
         stream: UserSettingService.instance.getSettings((p0) =>

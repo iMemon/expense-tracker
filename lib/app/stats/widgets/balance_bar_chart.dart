@@ -165,7 +165,7 @@ class _BalanceBarChartState extends State<BalanceBarChart> {
       }
     } else if (range == DateRange.custom) {
       if (endDate == null) {
-        throw Exception("End date can not be null");
+        throw Exception('End date can not be null');
       }
 
       final dateDiff = endDate.difference(startDate!).inDays;
@@ -292,7 +292,7 @@ class _BalanceBarChartState extends State<BalanceBarChart> {
               barTouchData: BarTouchData(
                 touchTooltipData: BarTouchTooltipData(
                   tooltipMargin: -10,
-                  tooltipBgColor: Theme.of(context).colorScheme.background,
+                  // tooltipBgColor: Theme.of(context).colorScheme.background,
                   getTooltipItem: (group, groupIndex, rod, rodIndex) {
                     return BarTooltipItem(
                       '${snapshot.data!.longTitles[group.x]}\n',

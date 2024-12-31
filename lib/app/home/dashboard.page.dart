@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
+// import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:monekin/app/ads/ad_helper.dart';
 import 'package:monekin/app/home/widgets/home_drawer.dart';
 import 'package:monekin/app/home/widgets/income_or_expense_card.dart';
@@ -39,22 +39,22 @@ class DashboardPage extends StatefulWidget {
 
 class _DashboardPageState extends State<DashboardPage> {
   final dateRangeService = DateRangeService();
-  late BannerAd bannerAd;
+  // late BannerAd bannerAd;
 
   void initBannerAd() {
-    bannerAd = BannerAd(
-      size: AdSize.mediumRectangle,
-      adUnitId: AdHelper.bannerAdUnitId,
-      listener: BannerAdListener(
-        onAdLoaded: (ad) {},
-        onAdFailedToLoad: (ad, error) {
-          ad.dispose();
-        },
-      ),
-      request: const AdRequest(),
-    );
+    // bannerAd = BannerAd(
+    //   size: AdSize.mediumRectangle,
+    //   adUnitId: AdHelper.bannerAdUnitId,
+    //   listener: BannerAdListener(
+    //     onAdLoaded: (ad) {},
+    //     onAdFailedToLoad: (ad, error) {
+    //       ad.dispose();
+    //     },
+    //   ),
+    //   request: const AdRequest(),
+    // );
 
-    bannerAd.load();
+    // bannerAd.load();
   }
 
   @override
@@ -284,11 +284,11 @@ class _DashboardPageState extends State<DashboardPage> {
                         }
                       }),
                   const SizedBox(height: 16),
-                  SizedBox(
-                    width: bannerAd.size.width.toDouble(),
-                    height: bannerAd.size.height.toDouble(),
-                    child: AdWidget(ad: bannerAd),
-                  ),
+                  // SizedBox(
+                  //   width: bannerAd.size.width.toDouble(),
+                  //   height: bannerAd.size.height.toDouble(),
+                  //   child: AdWidget(ad: bannerAd),
+                  // ),
                   const SizedBox(height: 16),
                   StreamBuilder(
                       stream: TransactionService.instance

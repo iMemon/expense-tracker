@@ -33,8 +33,6 @@ Future<DateTime?> openDateTimePicker(BuildContext context,
       initialEntryMode: initialEntryMode,
       lastDate: lastDate);
 
-  if (pickedDate == null) return null;
-
   if (!showTimePickerAfterDate) {
     return pickedDate;
   }
@@ -43,5 +41,5 @@ Future<DateTime?> openDateTimePicker(BuildContext context,
 
   if (timePicked == null) return null;
 
-  return pickedDate.copyWith(hour: timePicked.hour, minute: timePicked.minute);
+  return pickedDate!.copyWith(hour: timePicked.hour, minute: timePicked.minute);
 }

@@ -9,255 +9,6 @@
 
 part of 'app_router.dart';
 
-abstract class _$AppRouter extends RootStackRouter {
-  // ignore: unused_element
-  _$AppRouter({super.navigatorKey});
-
-  @override
-  final Map<String, PageFactory> pagesMap = {
-    AboutRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const AboutPage(),
-      );
-    },
-    AccountDetailsRoute.name: (routeData) {
-      final args = routeData.argsAs<AccountDetailsRouteArgs>();
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: AccountDetailsPage(
-          key: args.key,
-          account: args.account,
-        ),
-      );
-    },
-    AccountFormRoute.name: (routeData) {
-      final args = routeData.argsAs<AccountFormRouteArgs>(
-          orElse: () => const AccountFormRouteArgs());
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: AccountFormPage(
-          key: args.key,
-          account: args.account,
-        ),
-      );
-    },
-    AdvancedSettingsRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const AdvancedSettingsPage(),
-      );
-    },
-    AllAccountsRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const AllAccountsPage(),
-      );
-    },
-    BackupSettingsRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const BackupSettingsPage(),
-      );
-    },
-    BudgetDetailsRoute.name: (routeData) {
-      final args = routeData.argsAs<BudgetDetailsRouteArgs>();
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: BudgetDetailsPage(
-          key: args.key,
-          budget: args.budget,
-        ),
-      );
-    },
-    BudgetFormRoute.name: (routeData) {
-      final args = routeData.argsAs<BudgetFormRouteArgs>();
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: BudgetFormPage(
-          key: args.key,
-          budgetToEdit: args.budgetToEdit,
-          prevPage: args.prevPage,
-        ),
-      );
-    },
-    BudgetsRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const BudgetsPage(),
-      );
-    },
-    CategoriesListRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: CategoriesListPage(),
-      );
-    },
-    CategoryFormRoute.name: (routeData) {
-      final args = routeData.argsAs<CategoryFormRouteArgs>(
-          orElse: () => const CategoryFormRouteArgs());
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: CategoryFormPage(
-          key: args.key,
-          categoryUUID: args.categoryUUID,
-        ),
-      );
-    },
-    CurrencyManagerRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const CurrencyManagerPage(),
-      );
-    },
-    DashboardRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const DashboardPage(),
-      );
-    },
-    ExchangeRateDetailsRoute.name: (routeData) {
-      final args = routeData.argsAs<ExchangeRateDetailsRouteArgs>();
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: ExchangeRateDetailsPage(
-          key: args.key,
-          currency: args.currency,
-        ),
-      );
-    },
-    ExportDataRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const ExportDataPage(),
-      );
-    },
-    HelpUsRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const HelpUsPage(),
-      );
-    },
-    ImportCSVRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const ImportCSVPage(),
-      );
-    },
-    IntervalSelectorRoute.name: (routeData) {
-      final args = routeData.argsAs<IntervalSelectorRouteArgs>(
-          orElse: () => const IntervalSelectorRouteArgs());
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: IntervalSelectorPage(
-          key: args.key,
-          preselectedRecurrentRule: args.preselectedRecurrentRule,
-        ),
-      );
-    },
-    IntroRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const IntroPage(),
-      );
-    },
-    MainLayoutRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const MainLayoutPage(),
-      );
-    },
-    OnboardingRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const OnboardingPage(),
-      );
-    },
-    RecurrentTransactionRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const RecurrentTransactionPage(),
-      );
-    },
-    SettingsRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const SettingsPage(),
-      );
-    },
-    StatsRoute.name: (routeData) {
-      final args = routeData.argsAs<StatsRouteArgs>(
-          orElse: () => const StatsRouteArgs());
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: StatsPage(
-          key: args.key,
-          initialIndex: args.initialIndex,
-        ),
-      );
-    },
-    TagFormRoute.name: (routeData) {
-      final args = routeData.argsAs<TagFormRouteArgs>(
-          orElse: () => const TagFormRouteArgs());
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: TagFormPage(
-          key: args.key,
-          tag: args.tag,
-        ),
-      );
-    },
-    TagListRoute.name: (routeData) {
-      final args = routeData.argsAs<TagListRouteArgs>(
-          orElse: () => const TagListRouteArgs());
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: TagListPage(
-          key: args.key,
-          isModal: args.isModal,
-          selected: args.selected,
-        ),
-      );
-    },
-    TransactionDetailsRoute.name: (routeData) {
-      final args = routeData.argsAs<TransactionDetailsRouteArgs>();
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: TransactionDetailsPage(
-          key: args.key,
-          transaction: args.transaction,
-          prevPage: args.prevPage,
-        ),
-      );
-    },
-    TransactionFormRoute.name: (routeData) {
-      final args = routeData.argsAs<TransactionFormRouteArgs>(
-          orElse: () => const TransactionFormRouteArgs());
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: TransactionFormPage(
-          key: args.key,
-          transactionToEdit: args.transactionToEdit,
-          mode: args.mode,
-          fromAccount: args.fromAccount,
-          toAccount: args.toAccount,
-        ),
-      );
-    },
-    TransactionsRoute.name: (routeData) {
-      final args = routeData.argsAs<TransactionsRouteArgs>(
-          orElse: () => const TransactionsRouteArgs());
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: TransactionsPage(
-          key: args.key,
-          filters: args.filters,
-        ),
-      );
-    },
-  };
-}
-
 /// generated route for
 /// [AboutPage]
 class AboutRoute extends PageRouteInfo<void> {
@@ -269,7 +20,12 @@ class AboutRoute extends PageRouteInfo<void> {
 
   static const String name = 'AboutRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const AboutPage();
+    },
+  );
 }
 
 /// generated route for
@@ -290,8 +46,16 @@ class AccountDetailsRoute extends PageRouteInfo<AccountDetailsRouteArgs> {
 
   static const String name = 'AccountDetailsRoute';
 
-  static const PageInfo<AccountDetailsRouteArgs> page =
-      PageInfo<AccountDetailsRouteArgs>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<AccountDetailsRouteArgs>();
+      return AccountDetailsPage(
+        key: args.key,
+        account: args.account,
+      );
+    },
+  );
 }
 
 class AccountDetailsRouteArgs {
@@ -328,8 +92,17 @@ class AccountFormRoute extends PageRouteInfo<AccountFormRouteArgs> {
 
   static const String name = 'AccountFormRoute';
 
-  static const PageInfo<AccountFormRouteArgs> page =
-      PageInfo<AccountFormRouteArgs>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<AccountFormRouteArgs>(
+          orElse: () => const AccountFormRouteArgs());
+      return AccountFormPage(
+        key: args.key,
+        account: args.account,
+      );
+    },
+  );
 }
 
 class AccountFormRouteArgs {
@@ -359,7 +132,12 @@ class AdvancedSettingsRoute extends PageRouteInfo<void> {
 
   static const String name = 'AdvancedSettingsRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const AdvancedSettingsPage();
+    },
+  );
 }
 
 /// generated route for
@@ -373,7 +151,12 @@ class AllAccountsRoute extends PageRouteInfo<void> {
 
   static const String name = 'AllAccountsRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const AllAccountsPage();
+    },
+  );
 }
 
 /// generated route for
@@ -387,7 +170,12 @@ class BackupSettingsRoute extends PageRouteInfo<void> {
 
   static const String name = 'BackupSettingsRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const BackupSettingsPage();
+    },
+  );
 }
 
 /// generated route for
@@ -408,8 +196,16 @@ class BudgetDetailsRoute extends PageRouteInfo<BudgetDetailsRouteArgs> {
 
   static const String name = 'BudgetDetailsRoute';
 
-  static const PageInfo<BudgetDetailsRouteArgs> page =
-      PageInfo<BudgetDetailsRouteArgs>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<BudgetDetailsRouteArgs>();
+      return BudgetDetailsPage(
+        key: args.key,
+        budget: args.budget,
+      );
+    },
+  );
 }
 
 class BudgetDetailsRouteArgs {
@@ -448,8 +244,17 @@ class BudgetFormRoute extends PageRouteInfo<BudgetFormRouteArgs> {
 
   static const String name = 'BudgetFormRoute';
 
-  static const PageInfo<BudgetFormRouteArgs> page =
-      PageInfo<BudgetFormRouteArgs>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<BudgetFormRouteArgs>();
+      return BudgetFormPage(
+        key: args.key,
+        budgetToEdit: args.budgetToEdit,
+        prevPage: args.prevPage,
+      );
+    },
+  );
 }
 
 class BudgetFormRouteArgs {
@@ -482,7 +287,12 @@ class BudgetsRoute extends PageRouteInfo<void> {
 
   static const String name = 'BudgetsRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const BudgetsPage();
+    },
+  );
 }
 
 /// generated route for
@@ -496,7 +306,12 @@ class CategoriesListRoute extends PageRouteInfo<void> {
 
   static const String name = 'CategoriesListRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return CategoriesListPage();
+    },
+  );
 }
 
 /// generated route for
@@ -517,8 +332,17 @@ class CategoryFormRoute extends PageRouteInfo<CategoryFormRouteArgs> {
 
   static const String name = 'CategoryFormRoute';
 
-  static const PageInfo<CategoryFormRouteArgs> page =
-      PageInfo<CategoryFormRouteArgs>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<CategoryFormRouteArgs>(
+          orElse: () => const CategoryFormRouteArgs());
+      return CategoryFormPage(
+        key: args.key,
+        categoryUUID: args.categoryUUID,
+      );
+    },
+  );
 }
 
 class CategoryFormRouteArgs {
@@ -548,7 +372,12 @@ class CurrencyManagerRoute extends PageRouteInfo<void> {
 
   static const String name = 'CurrencyManagerRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const CurrencyManagerPage();
+    },
+  );
 }
 
 /// generated route for
@@ -562,7 +391,12 @@ class DashboardRoute extends PageRouteInfo<void> {
 
   static const String name = 'DashboardRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const DashboardPage();
+    },
+  );
 }
 
 /// generated route for
@@ -584,8 +418,16 @@ class ExchangeRateDetailsRoute
 
   static const String name = 'ExchangeRateDetailsRoute';
 
-  static const PageInfo<ExchangeRateDetailsRouteArgs> page =
-      PageInfo<ExchangeRateDetailsRouteArgs>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<ExchangeRateDetailsRouteArgs>();
+      return ExchangeRateDetailsPage(
+        key: args.key,
+        currency: args.currency,
+      );
+    },
+  );
 }
 
 class ExchangeRateDetailsRouteArgs {
@@ -615,7 +457,12 @@ class ExportDataRoute extends PageRouteInfo<void> {
 
   static const String name = 'ExportDataRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const ExportDataPage();
+    },
+  );
 }
 
 /// generated route for
@@ -629,7 +476,12 @@ class HelpUsRoute extends PageRouteInfo<void> {
 
   static const String name = 'HelpUsRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const HelpUsPage();
+    },
+  );
 }
 
 /// generated route for
@@ -643,7 +495,12 @@ class ImportCSVRoute extends PageRouteInfo<void> {
 
   static const String name = 'ImportCSVRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const ImportCSVPage();
+    },
+  );
 }
 
 /// generated route for
@@ -664,8 +521,17 @@ class IntervalSelectorRoute extends PageRouteInfo<IntervalSelectorRouteArgs> {
 
   static const String name = 'IntervalSelectorRoute';
 
-  static const PageInfo<IntervalSelectorRouteArgs> page =
-      PageInfo<IntervalSelectorRouteArgs>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<IntervalSelectorRouteArgs>(
+          orElse: () => const IntervalSelectorRouteArgs());
+      return IntervalSelectorPage(
+        key: args.key,
+        preselectedRecurrentRule: args.preselectedRecurrentRule,
+      );
+    },
+  );
 }
 
 class IntervalSelectorRouteArgs {
@@ -695,7 +561,12 @@ class IntroRoute extends PageRouteInfo<void> {
 
   static const String name = 'IntroRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const IntroPage();
+    },
+  );
 }
 
 /// generated route for
@@ -709,7 +580,12 @@ class MainLayoutRoute extends PageRouteInfo<void> {
 
   static const String name = 'MainLayoutRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const MainLayoutPage();
+    },
+  );
 }
 
 /// generated route for
@@ -723,7 +599,12 @@ class OnboardingRoute extends PageRouteInfo<void> {
 
   static const String name = 'OnboardingRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const OnboardingPage();
+    },
+  );
 }
 
 /// generated route for
@@ -737,7 +618,12 @@ class RecurrentTransactionRoute extends PageRouteInfo<void> {
 
   static const String name = 'RecurrentTransactionRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const RecurrentTransactionPage();
+    },
+  );
 }
 
 /// generated route for
@@ -751,7 +637,12 @@ class SettingsRoute extends PageRouteInfo<void> {
 
   static const String name = 'SettingsRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const SettingsPage();
+    },
+  );
 }
 
 /// generated route for
@@ -772,7 +663,17 @@ class StatsRoute extends PageRouteInfo<StatsRouteArgs> {
 
   static const String name = 'StatsRoute';
 
-  static const PageInfo<StatsRouteArgs> page = PageInfo<StatsRouteArgs>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      final args =
+          data.argsAs<StatsRouteArgs>(orElse: () => const StatsRouteArgs());
+      return StatsPage(
+        key: args.key,
+        initialIndex: args.initialIndex,
+      );
+    },
+  );
 }
 
 class StatsRouteArgs {
@@ -809,8 +710,17 @@ class TagFormRoute extends PageRouteInfo<TagFormRouteArgs> {
 
   static const String name = 'TagFormRoute';
 
-  static const PageInfo<TagFormRouteArgs> page =
-      PageInfo<TagFormRouteArgs>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      final args =
+          data.argsAs<TagFormRouteArgs>(orElse: () => const TagFormRouteArgs());
+      return TagFormPage(
+        key: args.key,
+        tag: args.tag,
+      );
+    },
+  );
 }
 
 class TagFormRouteArgs {
@@ -849,8 +759,18 @@ class TagListRoute extends PageRouteInfo<TagListRouteArgs> {
 
   static const String name = 'TagListRoute';
 
-  static const PageInfo<TagListRouteArgs> page =
-      PageInfo<TagListRouteArgs>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      final args =
+          data.argsAs<TagListRouteArgs>(orElse: () => const TagListRouteArgs());
+      return TagListPage(
+        key: args.key,
+        isModal: args.isModal,
+        selected: args.selected,
+      );
+    },
+  );
 }
 
 class TagListRouteArgs {
@@ -893,8 +813,17 @@ class TransactionDetailsRoute
 
   static const String name = 'TransactionDetailsRoute';
 
-  static const PageInfo<TransactionDetailsRouteArgs> page =
-      PageInfo<TransactionDetailsRouteArgs>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<TransactionDetailsRouteArgs>();
+      return TransactionDetailsPage(
+        key: args.key,
+        transaction: args.transaction,
+        prevPage: args.prevPage,
+      );
+    },
+  );
 }
 
 class TransactionDetailsRouteArgs {
@@ -940,8 +869,20 @@ class TransactionFormRoute extends PageRouteInfo<TransactionFormRouteArgs> {
 
   static const String name = 'TransactionFormRoute';
 
-  static const PageInfo<TransactionFormRouteArgs> page =
-      PageInfo<TransactionFormRouteArgs>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<TransactionFormRouteArgs>(
+          orElse: () => const TransactionFormRouteArgs());
+      return TransactionFormPage(
+        key: args.key,
+        transactionToEdit: args.transactionToEdit,
+        mode: args.mode,
+        fromAccount: args.fromAccount,
+        toAccount: args.toAccount,
+      );
+    },
+  );
 }
 
 class TransactionFormRouteArgs {
@@ -987,8 +928,17 @@ class TransactionsRoute extends PageRouteInfo<TransactionsRouteArgs> {
 
   static const String name = 'TransactionsRoute';
 
-  static const PageInfo<TransactionsRouteArgs> page =
-      PageInfo<TransactionsRouteArgs>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<TransactionsRouteArgs>(
+          orElse: () => const TransactionsRouteArgs());
+      return TransactionsPage(
+        key: args.key,
+        filters: args.filters,
+      );
+    },
+  );
 }
 
 class TransactionsRouteArgs {

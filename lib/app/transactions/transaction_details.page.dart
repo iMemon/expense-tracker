@@ -18,7 +18,7 @@ import 'package:monekin/core/services/view-actions/transaction_view_actions_serv
 import 'package:monekin/core/utils/color_utils.dart';
 import 'package:monekin/core/utils/list_tile_action_item.dart';
 import 'package:monekin/i18n/translations.g.dart';
-import 'package:slang/builder/utils/string_extensions.dart';
+import 'package:slang/src/builder/utils/string_extensions.dart';
 import 'package:uuid/uuid.dart';
 
 class TransactionDetailAction {
@@ -657,7 +657,7 @@ class _TransactionDetailsPageState extends State<TransactionDetailsPage> {
                                     if (transaction.tags.isNotEmpty) ...[
                                       const Divider(indent: 12),
                                       ListTile(
-                                        title: Text("Tags"),
+                                        title: Text('Tags'),
                                         subtitle: Padding(
                                           padding:
                                               const EdgeInsets.only(top: 4),

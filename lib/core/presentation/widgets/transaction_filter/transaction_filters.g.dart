@@ -45,8 +45,8 @@ abstract class _$TransactionFiltersCWProxy {
     DateTime? minDate,
     DateTime? maxDate,
     String? searchValue,
-    bool? includeParentCategoriesInSearch,
-    bool? includeReceivingAccountsInAccountFilters,
+    bool includeParentCategoriesInSearch,
+    bool includeReceivingAccountsInAccountFilters,
     double? minValue,
     double? maxValue,
     List<TransactionType>? transactionTypes,
@@ -155,15 +155,13 @@ class _$TransactionFiltersCWProxyImpl implements _$TransactionFiltersCWProxy {
           // ignore: cast_nullable_to_non_nullable
           : searchValue as String?,
       includeParentCategoriesInSearch:
-          includeParentCategoriesInSearch == const $CopyWithPlaceholder() ||
-                  includeParentCategoriesInSearch == null
+          includeParentCategoriesInSearch == const $CopyWithPlaceholder()
               ? _value.includeParentCategoriesInSearch
               // ignore: cast_nullable_to_non_nullable
               : includeParentCategoriesInSearch as bool,
       includeReceivingAccountsInAccountFilters:
           includeReceivingAccountsInAccountFilters ==
-                      const $CopyWithPlaceholder() ||
-                  includeReceivingAccountsInAccountFilters == null
+                  const $CopyWithPlaceholder()
               ? _value.includeReceivingAccountsInAccountFilters
               // ignore: cast_nullable_to_non_nullable
               : includeReceivingAccountsInAccountFilters as bool,
